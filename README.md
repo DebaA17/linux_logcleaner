@@ -6,11 +6,26 @@ A Python-based log cleaner for Linux systems. Intended for educational Red Team 
 ## Disclaimer
 **For educational purposes only. Do not use this tool for unauthorized or malicious activity. The author is not responsible for misuse.**
 
+
+## OS Compatibility
+- Tested on: **Linux** (Ubuntu, Debian, CentOS, Kali, etc.)
+- Not compatible with Windows or macOS.
+
 ## Usage
+### Python
 ```
 python3 cleaner.py --wipe-all           # Wipe all logs (root: system-wide, non-root: user logs)
 python3 cleaner.py --dry-run --wipe-all # Show which files would be cleaned
 python3 cleaner.py --target /path/to/file # Clean a specific log file
+```
+
+### Bash Script
+You can also use the provided bash wrapper:
+```
+chmod +x run_cleaner.sh
+./run_cleaner.sh --wipe-all
+./run_cleaner.sh --dry-run --wipe-all
+./run_cleaner.sh --target /path/to/file
 ```
 
 ## Privilege Behavior
